@@ -13,7 +13,7 @@ else
     echo ">>> No CA file found, creating new..."
     openssl genrsa -out rootCA.key 4096
     openssl req -x509 -new -nodes -key rootCA.key -sha256 -days $CA_Vaild_Day -out rootCA.crt <<< $'\n\n\n\n\n\n\n\n\n' 
-    echo ">>> CA files created successfully and vaild for 1024 days. " 
+    echo -e "\n\n>>> CA files created successfully and vaild for 1024 days. " 
 fi
 
 echo -e "\n>>> Enter the domain name to sign: "
